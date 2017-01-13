@@ -1,4 +1,4 @@
-package com.stone.verticalslide;
+package com.stone.verticalslide.fragment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -9,12 +9,14 @@ import android.widget.BaseAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 
-public class VerticalFragment2 extends Fragment {
+import com.stone.verticalslide.R;
+
+public class DragDownListViewFragment extends Fragment {
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		View rootView = inflater.inflate(R.layout.vertical_fragment2, null);
+		View rootView = inflater.inflate(R.layout.fragment_drag_down_listview, null);
 		initView(rootView);
 		return rootView;
 	}
@@ -39,7 +41,7 @@ public class VerticalFragment2 extends Fragment {
 
 				if (null == convertView) {
 					convertView = inflater.inflate(
-							R.layout.fragment2_list_item, null);
+							R.layout.list_item, null);
 				}
 				return convertView;
 			}

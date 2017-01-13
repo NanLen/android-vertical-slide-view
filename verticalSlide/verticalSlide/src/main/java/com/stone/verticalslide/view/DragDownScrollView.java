@@ -1,4 +1,4 @@
-package com.stone.verticalslide;
+package com.stone.verticalslide.view;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -6,9 +6,10 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewConfiguration;
 import android.widget.ListView;
+import android.widget.ScrollView;
 
 
-public class CustListView extends ListView {
+public class DragDownScrollView extends ScrollView {
     private static final int MODE_IDLE = 0;
     private static final int MODE_HORIZONTAL = 1;
     private static final int MODE_VERTICAL = 2;
@@ -19,15 +20,15 @@ public class CustListView extends ListView {
     boolean isAtTop = true; // 如果是true，则允许拖动至底部的下一页
     private int mTouchSlop = 4; // 判定为滑动的阈值，单位是像素
 
-    public CustListView(Context arg0) {
+    public DragDownScrollView(Context arg0) {
         this(arg0, null);
     }
 
-    public CustListView(Context arg0, AttributeSet arg1) {
+    public DragDownScrollView(Context arg0, AttributeSet arg1) {
         this(arg0, arg1, 0);
     }
 
-    public CustListView(Context arg0, AttributeSet arg1, int arg2) {
+    public DragDownScrollView(Context arg0, AttributeSet arg1, int arg2) {
         super(arg0, arg1, arg2);
 
         ViewConfiguration configuration = ViewConfiguration.get(getContext());
@@ -62,26 +63,11 @@ public class CustListView extends ListView {
     }
 
     /**
-     * 判断listView是否在顶部
+     * 判断scrollview是否在顶部
      *
      * @return 是否在顶部
      */
     public boolean isAtTop() {
-        boolean resultValue = false;
-        int childNum = getChildCount();
-        if (childNum == 0) {
-            // 没有child，肯定在顶部
-            resultValue = true;
-        } else {
-            if (getFirstVisiblePosition() == 0) {
-                // 根据第一个childView来判定是否在顶部
-                View firstView = getChildAt(0);
-                if (Math.abs(firstView.getTop()) < 2) {
-                    resultValue = true;
-                }
-            }
-        }
-
-        return resultValue;
+        return getScaleY()==0;
     }
 }

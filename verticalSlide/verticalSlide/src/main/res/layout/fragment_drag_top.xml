@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.stone.verticalslide.view.DragTopScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/custScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/test" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="因为这几天北京某法院向媒体通发的一个新闻就说：京东自营不等于自己经营。理由是京东集团旗下具备自营商品销售资质的有十几家子公司，比如北京京东世纪信息技术有限公司、天津京东海荣贸易有限公司、沈阳京东世纪贸易有限公司等等。以后每家子公司销售的商品只能说是“某某子公司自营”，而不能一概说是京东自营……" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="因为这几天北京某法院向媒体通发的一个新闻就说：京东自营不等于自己经营。理由是京东集团旗下具备自营商品销售资质的有十几家子公司，比如北京京东世纪信息技术有限公司、天津京东海荣贸易有限公司、沈阳京东世纪贸易有限公司等等。以后每家子公司销售的商品只能说是“某某子公司自营”，而不能一概说是京东自营……" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="因为这几天北京某法院向媒体通发的一个新闻就说：京东自营不等于自己经营。理由是京东集团旗下具备自营商品销售资质的有十几家子公司，比如北京京东世纪信息技术有限公司、天津京东海荣贸易有限公司、沈阳京东世纪贸易有限公司等等。以后每家子公司销售的商品只能说是“某某子公司自营”，而不能一概说是京东自营……" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:background="#fafafa"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1px"
+                android:layout_weight="1"
+                android:background="#ddd" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="继续拖动，查看下一页"
+                android:textColor="#777"
+                android:textSize="13sp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1px"
+                android:layout_weight="1"
+                android:background="#ddd" />
+        </LinearLayout>
+
+    </LinearLayout>
+</com.stone.verticalslide.view.DragTopScrollView>

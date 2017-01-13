@@ -1,4 +1,4 @@
-package com.stone.verticalslide;
+package com.stone.verticalslide.view;
 
 import android.annotation.SuppressLint;
 import android.content.Context;

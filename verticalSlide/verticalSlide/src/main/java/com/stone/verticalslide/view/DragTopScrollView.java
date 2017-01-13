@@ -1,4 +1,4 @@
-package com.stone.verticalslide;
+package com.stone.verticalslide.view;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -10,7 +10,7 @@ import android.widget.ScrollView;
  * 只为顶部ScrollView使用
  * 如果使用了其它的可拖拽的控件，请仿照该类实现isAtBottom方法
  */
-public class CustScrollView extends ScrollView {
+public class DragTopScrollView extends ScrollView {
     private static final int TOUCH_IDLE = 0;
     private static final int TOUCH_INNER_CONSIME = 1; // touch事件由ScrollView内部消费
     private static final int TOUCH_DRAG_LAYOUT = 2; // touch事件由上层的DragLayout去消费
@@ -20,15 +20,15 @@ public class CustScrollView extends ScrollView {
     private int scrollMode;
     private float downY;
 
-    public CustScrollView(Context arg0) {
+    public DragTopScrollView(Context arg0) {
         this(arg0, null);
     }
 
-    public CustScrollView(Context arg0, AttributeSet arg1) {
+    public DragTopScrollView(Context arg0, AttributeSet arg1) {
         this(arg0, arg1, 0);
     }
 
-    public CustScrollView(Context arg0, AttributeSet arg1, int arg2) {
+    public DragTopScrollView(Context arg0, AttributeSet arg1, int arg2) {
         super(arg0, arg1, arg2);
         ViewConfiguration configuration = ViewConfiguration.get(getContext());
         mTouchSlop = configuration.getScaledTouchSlop();

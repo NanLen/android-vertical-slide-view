@@ -2,28 +2,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
-
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="50dp"
-        android:background="#1fa9a6"
-        android:gravity="center"
-        android:text="商品详情"
-        android:textColor="#fff"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+    android:orientation="vertical">
 
     <View
         android:layout_width="fill_parent"
         android:layout_height="1px"
         android:background="#aaaaaa" />
 
-    <com.stone.verticalslide.DragLayout
+    <com.stone.verticalslide.view.DragLayout
         android:id="@+id/draglayout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1" >
+        android:layout_weight="1">
 
         <FrameLayout
             android:id="@+id/first"
@@ -34,7 +24,7 @@
             android:id="@+id/second"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent" />
-    </com.stone.verticalslide.DragLayout>
+    </com.stone.verticalslide.view.DragLayout>
 
     <View
         android:layout_width="fill_parent"
@@ -46,7 +36,7 @@
         android:layout_height="60dp"
         android:background="#fff"
         android:gravity="center_vertical"
-        android:orientation="horizontal" >
+        android:orientation="horizontal">
 
         <TextView
             android:layout_width="0dp"

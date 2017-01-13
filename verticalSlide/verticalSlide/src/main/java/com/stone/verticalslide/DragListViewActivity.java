@@ -2,23 +2,23 @@ package com.stone.verticalslide;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.Window;
 
-import com.stone.verticalslide.fragment.DragDownWebViewFragment;
+import com.stone.verticalslide.fragment.DragDownListViewFragment;
 import com.stone.verticalslide.fragment.DragTopFragment;
 import com.stone.verticalslide.view.DragLayout;
-import com.stone.verticalslide.view.DragLayout.ShowNextPageNotifier;
 
-public class MainActivity extends AppCompatActivity {
+/**
+ * Created by liyanan on 2017/1/13.
+ */
 
+public class DragListViewActivity extends AppCompatActivity {
     private DragTopFragment fragment1;
-    private DragDownWebViewFragment fragment3;
+    private DragDownListViewFragment fragment2;
     private DragLayout draglayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
         initView();
     }
@@ -28,20 +28,19 @@ public class MainActivity extends AppCompatActivity {
      */
     private void initView() {
         fragment1 = new DragTopFragment();
-        fragment3 = new DragDownWebViewFragment();
+        fragment2 = new DragDownListViewFragment();
 
         getSupportFragmentManager().beginTransaction()
-                .add(R.id.first, fragment1).add(R.id.second, fragment3)
+                .add(R.id.first, fragment1).add(R.id.second, fragment2)
                 .commit();
 
-        ShowNextPageNotifier nextIntf = new ShowNextPageNotifier() {
+        DragLayout.ShowNextPageNotifier nextIntf = new DragLayout.ShowNextPageNotifier() {
             @Override
             public void onDragNext() {
-                fragment3.initView();
+
             }
         };
         draglayout = (DragLayout) findViewById(R.id.draglayout);
         draglayout.setNextPageListener(nextIntf);
     }
-
 }

@@ -1,4 +1,4 @@
-package com.stone.verticalslide;
+package com.stone.verticalslide.view;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -10,7 +10,7 @@ import android.widget.ZoomButtonsController;
 
 import java.lang.reflect.Method;
 
-public class CustWebView extends WebView {
+public class DragDownWebView extends WebView {
     private static final int MODE_IDLE = 0;
     private static final int MODE_HORIZONTAL = 1;
     private static final int MODE_VERTICAL = 2;
@@ -21,15 +21,15 @@ public class CustWebView extends WebView {
     boolean isAtTop = true; // 如果是true，则允许拖动至底部的下一页
     private int mTouchSlop = 4; // 判定为滑动的阈值，单位是像素
 
-    public CustWebView(Context arg0) {
+    public DragDownWebView(Context arg0) {
         this(arg0, null);
     }
 
-    public CustWebView(Context arg0, AttributeSet arg1) {
+    public DragDownWebView(Context arg0, AttributeSet arg1) {
         this(arg0, arg1, 0);
     }
 
-    public CustWebView(Context arg0, AttributeSet arg1, int arg2) {
+    public DragDownWebView(Context arg0, AttributeSet arg1, int arg2) {
         super(arg0, arg1, arg2);
         disableZoomController();
 
